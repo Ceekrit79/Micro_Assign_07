@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css"> 
+  <title>YourSecretSafeSpace</title>
+  
+</head>
+<body>
+
+  <div class="header">
+    <h1>YourSecretSafeSpace</h1>
+    <p>A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
+  </div>
+
+  <!-- ONBOARDING SECTION -->
+  <div class="onboarding-container">
+    <div class="choice-card" onclick="showFeed('seeking')">
+      <h2>🌱 Seeking a Space</h2>
+      <p>I need a quiet, supportive sanctuary to read community rants, raves, and let off some steam anonymously.</p>
+      <button class="btn">Enter Sanctuary</button>
+    </div>
+    
+    <div class="choice-card" onclick="showFeed('providing')">
+      <h2>🛡️ Providing a Space</h2>
+      <p>I am here to offer comfort, support, listen to others, and send anonymous blessings to those who need them.</p>
+      <button class="btn">Offer Support</button>
+    </div>
+  </div>
+
+  <!-- DYNAMIC FEED SECTION -->
+  <div class="feed-container" id="feedArea">
+    <div class="post-card" style="text-align: center; color: #7a7571;">
+      <p>⬅️ Click one of the onboarding cards above to see who is active in the sanctuary! ➡️</p>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
+  <script>
+    function showFeed(type) {
+      var feedArea = document.getElementById('feedArea');
+      
+      if(type === 'seeking') {
+        feedArea.innerHTML = `
+          <div class="post-card">
+            <span class="tag rant">Active Vent</span>
+            <h3>Struggling with work-life balance this week</h3>
+            <p>Between long shifts and getting ready for the upcoming school semester, I feel completely overwhelmed. Just needed a quiet place to drop this text.</p>
+            <button class="btn">Send a Virtual Hug</button>
+          </div>
+        `;
+      } else if(type === 'providing') {
+        feedArea.innerHTML = `
+          <div class="post-card">
+            <span class="tag rave">Support Sentinel Available</span>
+            <h3>Here to listen!</h3>
+            <p>I have a cup of warm tea ready, and I am standing by to read any rants or view any worries you want to drop. You are completely safe here, friend.</p>
+            <button class="btn">Connect Privately</button>
+          </div>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
