@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
   <title>SecretSafeSpaces</title>
-  
+
 </head>
 <body>
+
+  <!-- TOP NAVIGATION MENU -->
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="hugs.html">Community Wall</a>
+    <a href="connect.html">1-on-1 Support</a>
+  </nav>
+
+  <!-- WORK IN PROGRESS NOTICE -->
+  <div class="wip-banner">
+      🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode as we build out the full platform!
+  </div>
 
   <div class="header">
     <h1>Secret Safe Spaces</h1>
@@ -35,32 +49,13 @@
     </div>
   </div>
 
+  <!-- COPYRIGHT FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+  </footer>
+
   <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
-  <script>
-    function showFeed(type) {
-      var feedArea = document.getElementById('feedArea');
-      
-      if(type === 'seeking') {
-        feedArea.innerHTML = `
-          <div class="post-card">
-            <span class="tag rant">Active Vent</span>
-            <h3>Struggling with work-life balance this week</h3>
-            <p>Between long shifts and getting ready for the upcoming school semester, I feel completely overwhelmed. Just needed a quiet place to drop this text.</p>
-            <button class="btn">Send a Virtual Hug</button>
-          </div>
-        `;
-      } else if(type === 'providing') {
-        feedArea.innerHTML = `
-          <div class="post-card">
-            <span class="tag rave">Support Sentinel Available</span>
-            <h3>Here to listen!</h3>
-            <p>I have a cup of warm tea ready, and I am standing by to read any rants or view any worries you want to drop. You are completely safe here, friend.</p>
-            <button class="btn">Connect Privately</button>
-          </div>
-        `;
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
